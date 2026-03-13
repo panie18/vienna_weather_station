@@ -1,0 +1,26 @@
+[Unit]
+Description=Wetterstation Wien API
+After=network.target
+
+[Service]
+User=pauli
+WorkingDirectory=/home/pauli/weather-api
+Environment="HA_TOKEN=DEIN_HOME_ASSISTANT_TOKEN_HIER"
+Environment="HA_URL=http://HOMEASSISTANT_IP:8123"
+ExecStart=/home/pauli/weather-api/venv/bin/uvicorn app:app --host 127.0.0.1 --port 8000
+Restart=always
+RestartSec=5
+
+# ── Systemd Härtung ─────────────────────────────────────────────
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=/home/pauli/weather-api
+PrivateTmp=yes
+# Netzwerk: nur localhost + Home Assistant
+# HA_IP anpassen!
+IPAddressDeny=any
+IPAddressAllow=127.0.0.0/8 ::1/128 HOMEASSISTANT_IP/32
+
+[Install]
+WantedBy=multi-user.target
