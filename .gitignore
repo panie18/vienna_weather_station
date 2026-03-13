@@ -1,0 +1,27 @@
+# Secrets – niemals committen
+weather-api.service
+.env
+*.env
+
+# Datenbank
+weather.db
+*.db
+
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Backup-Dateien
+*.bak
+*.orig
+
+# macOS
+.DS_Store
+
+# Editor
+.idea/
+.vscode/
