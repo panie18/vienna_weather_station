@@ -4,7 +4,7 @@ Live-Wetterdaten aus Wien mit einer eigenen Wetterstation — als Dashboard und 
 
 **api.treesinvienna.eu**
 <div align="center">
-<img width="200" height="200" alt="image" src="[https://github.com/user-attachments/assets/ad52cc5a-5fd5-4481-92d8-f0d2aff88ae5](https://github.com/panie18/vienna_weather_station/blob/main/image.png)" />
+<img width="200" height="200" alt="image" src="https://github.com/panie18/vienna_weather_station/blob/main/image.png" />
 </div>
 ---
 
